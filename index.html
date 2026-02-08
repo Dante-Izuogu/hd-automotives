@@ -8,12 +8,11 @@
 </head>
 <body>
 
+  <!-- HERO -->
   <header class="hero">
-    <!-- Video background -->
     <video class="hero-video" autoplay muted loop playsinline>
       <source src="../assets/landing.mp4" type="video/mp4">
     </video>
-
     <div class="overlay"></div>
 
     <nav class="nav">
@@ -32,25 +31,76 @@
     </div>
   </header>
 
-  <section id="services" class="section">
+  <!-- SERVICES -->
+  <section id="services" class="section section-dark">
     <h2>Our Services</h2>
-    <div class="services-grid">
-      <div class="card">General Servicing</div>
-      <div class="card">Diagnostics</div>
-      <div class="card">Brakes & Suspension</div>
-      <div class="card">MOT Preparation</div>
+
+    <div class="service-panel">
+      <div class="service-image" style="background-image: url('../assets/service1.jpg');">
+        <div class="service-image-overlay"></div>
+        <h3>General Servicing</h3>
+      </div>
+      <div class="service-text">
+        <p>
+          Routine servicing to keep your vehicle running smoothly and reliably.
+          We follow manufacturer guidelines and use quality parts and oils.
+        </p>
+      </div>
     </div>
+
+    <div class="service-panel reverse">
+      <div class="service-image" style="background-image: url('../assets/service2.jpg');">
+        <div class="service-image-overlay"></div>
+        <h3>Diagnostics</h3>
+      </div>
+      <div class="service-text">
+        <p>
+          Advanced diagnostics to quickly identify faults and warning lights,
+          saving you time and unnecessary repair costs.
+        </p>
+      </div>
+    </div>
+
+    <div class="service-panel">
+      <div class="service-image" style="background-image: url('../assets/service3.jpg');">
+        <div class="service-image-overlay"></div>
+        <h3>Brakes & Suspension</h3>
+      </div>
+      <div class="service-text">
+        <p>
+          From brake pads to suspension components, we ensure your car is safe,
+          responsive, and comfortable on the road.
+        </p>
+      </div>
+    </div>
+
+    <div class="service-panel reverse">
+      <div class="service-image" style="background-image: url('../assets/service4.jpg');">
+        <div class="service-image-overlay"></div>
+        <h3>MOT Preparation</h3>
+      </div>
+      <div class="service-text">
+        <p>
+          Pre-MOT inspections and repairs to give your vehicle the best chance
+          of passing first time.
+        </p>
+      </div>
+    </div>
+
   </section>
 
-  <section id="about" class="section dark">
+  <!-- ABOUT -->
+  <section id="about" class="section section-dark">
     <h2>About HD Automotives</h2>
-    <p>
-      HD Automotives is a local garage providing professional servicing,
-      diagnostics, and repairs you can trust.
+    <p class="about-text">
+      HD Automotives is a trusted local garage providing professional vehicle
+      servicing, diagnostics, and repairs. We pride ourselves on honest advice
+      and quality workmanship.
     </p>
   </section>
 
-  <section id="contact" class="section">
+  <!-- CONTACT -->
+  <section id="contact" class="section section-dark">
     <h2>Contact Us</h2>
     <p>Email: info@hdautomotives.co.uk</p>
     <p>Phone: 07XXX XXXXXX</p>
