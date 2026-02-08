@@ -8,24 +8,32 @@
 body {
   background: #1d1d1d;
   color: #fff;
+  padding-top: 72px; /* space for fixed navbar */
 }
 
 /* ================= NAV ================= */
 .nav {
-  position: relative;
-  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
-  background: #111; /* solid background for logo */
+  padding: 0 40px;
+  background: #111;
 }
 
-.logo {
-  font-size: 1.4rem;
-  font-weight: bold;
+/* NAV LOGO IMAGE */
+.nav-logo img {
+  height: 140px;
+  width: auto;
+  display: block;
 }
 
+/* NAV LINKS */
 .nav-links {
   list-style: none;
   display: flex;
@@ -41,7 +49,7 @@ body {
 /* ================= HERO ================= */
 .hero {
   position: relative;
-  height: calc(100vh - 72px); /* account for nav height */
+  height: calc(100vh - 72px);
   overflow: hidden;
 }
 
@@ -58,11 +66,26 @@ body {
   background: rgba(0,0,0,0.75);
 }
 
+/* ===== HERO LOGO ===== */
+.hero-logo {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.hero-logo img {
+  height: 90px;
+  width: auto;
+  object-fit: contain;
+}
+
 /* ================= HERO CONTENT ================= */
 .hero-content {
   position: relative;
   z-index: 2;
-  height: 100%;
+  height: calc(100% - 140px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -112,13 +135,14 @@ body {
 
 #services h2 {
   padding: 80px 20px 40px;
+  text-align: center;
 }
 
 .service-row {
   display: flex;
   min-height: 375px;
   width: 100%;
-  margin: 10px
+  margin: 10px;
 }
 
 .service-row.reverse {
@@ -134,6 +158,7 @@ body {
   background-size: cover;
   background-position: center;
   position: relative;
+  overflow: hidden;
 }
 
 .service-overlay {
@@ -157,17 +182,13 @@ body {
   font-size: 1.1rem;
   background: #1d1d1d;
 }
-.service-image {
-  overflow: hidden;
-}
 
-/* Image on the LEFT → round RIGHT inner corners */
+/* INNER CORNER ROUNDING */
 .service-row:not(.reverse) .service-image {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
 
-/* Image on the RIGHT → round LEFT inner corners */
 .service-row.reverse .service-image {
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -236,8 +257,21 @@ body {
 
 /* ================= FOOTER ================= */
 footer {
-  padding: 30px;
-  text-align: center;
+  padding: 10px;
   background: #111;
   font-size: 0.9rem;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.footer-inner img {
+  height: 125px;
+  width: auto;
 }
