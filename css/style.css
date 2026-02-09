@@ -27,14 +27,15 @@ body {
 }
 
 .nav-logo img {
-  height: 60px;
+  height: 140px;
   width: auto;
+  display: block;
 }
 
-.nav-center {
+.nav-phone {
   color: #fff;
-  font-weight: 600;
-  font-size: 1.1rem;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .nav-links {
@@ -130,7 +131,6 @@ body {
   min-height: 375px;
   width: 100%;
   margin: 10px 0;
-  flex-wrap: wrap;
 }
 
 .service-row.reverse {
@@ -140,7 +140,6 @@ body {
 .service-image,
 .service-text {
   width: 48%;
-  min-width: 300px;
 }
 
 .service-image {
@@ -160,16 +159,14 @@ body {
 }
 
 .service-overlay h3 {
-  font-size: 2rem;
-  text-align: center;
-  padding: 10px;
+  font-size: 2.5rem;
 }
 
 .service-text {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px;
+  padding: 60px;
   font-size: 1.1rem;
   background: #1d1d1d;
 }
@@ -267,34 +264,36 @@ footer {
   width: auto;
 }
 
-/* ================= RESPONSIVE ================= */
-@media(max-width: 768px) {
-  .nav-links {
-    gap: 15px;
-    font-size: 0.9rem;
+/* ================= MOBILE RESPONSIVENESS ================= */
+@media (max-width: 768px) {
+  /* Navbar stacking */
+  .nav {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 20px;
   }
 
   .nav-logo img {
-    height: 50px;
+    height: 100px;
+    margin-bottom: 10px;
   }
 
-  .nav-center {
-    font-size: 0.95rem;
+  .nav-phone {
+    display: block;
+    margin-bottom: 10px;
   }
 
-  .service-row {
+  .nav-links {
     flex-direction: column;
+    gap: 15px;
+    align-items: center;
   }
 
-  .service-image,
-  .service-text {
-    width: 100%;
+  .nav-links a {
+    font-size: 1.2rem;
   }
 
-  .service-overlay h3 {
-    font-size: 1.5rem;
-  }
-
+  /* Hero text smaller */
   .hero-content h1 {
     font-size: 2rem;
   }
@@ -304,7 +303,32 @@ footer {
   }
 
   .cta-btn {
-    padding: 10px 20px;
-    font-size: 0.9rem;
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+
+  /* Services stacked */
+  .service-row,
+  .service-row.reverse {
+    flex-direction: column;
+  }
+
+  .service-image,
+  .service-text {
+    width: 100%;
+  }
+
+  .service-text {
+    padding: 20px;
+  }
+
+  /* Footer stacked */
+  .footer-inner {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-inner img {
+    height: 100px;
   }
 }
