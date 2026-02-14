@@ -1,3 +1,5 @@
+/* ================= GLOBAL ================= */
+
 * {
   margin: 0;
   padding: 0;
@@ -8,55 +10,70 @@
 body {
   background: #1d1d1d;
   color: #fff;
+  padding-top: 100px; /* matches navbar height */
 }
 
-/* ================= NAV ================= */
+/* ================= NAVBAR ================= */
 
 .nav {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
   background: #111;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 20px;
   z-index: 1000;
 }
 
+.nav-inner {
+  max-width: 1200px;
+  margin: auto;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
 .nav-logo img {
-  height: 60px;
+  height: 90px; /* BIG logo */
   width: auto;
 }
 
 .nav-phone {
   font-weight: bold;
-  font-size: 1rem;
-  color: #fff;
+  font-size: 1.1rem;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 30px;
 }
 
 .nav-links a {
+  color: white;
   text-decoration: none;
-  color: #fff;
   font-weight: 600;
+  transition: 0.2s ease;
 }
 
-body {
-  padding-top: 90px; /* space for fixed nav */
+.nav-links a:hover {
+  color: #b72722;
+}
+
+.nav-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
 }
 
 /* ================= HERO ================= */
 
 .hero {
   position: relative;
-  height: 90vh;
+  height: calc(100vh - 100px);
   overflow: hidden;
 }
 
@@ -70,7 +87,7 @@ body {
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0,0,0,0.75);
 }
 
 .hero-content {
@@ -86,20 +103,20 @@ body {
 }
 
 .hero-content h1 {
-  font-size: 2.5rem;
-  max-width: 700px;
+  font-size: 3rem;
+  max-width: 800px;
 }
 
 .hero-content p {
-  margin-top: 15px;
-  font-size: 1.1rem;
+  margin-top: 16px;
+  font-size: 1.2rem;
 }
 
 .cta-btn {
-  margin-top: 25px;
-  padding: 12px 28px;
+  margin-top: 28px;
+  padding: 14px 30px;
   background: #b72722;
-  color: #fff;
+  color: white;
   text-decoration: none;
   font-weight: bold;
   border-radius: 4px;
@@ -108,7 +125,7 @@ body {
 /* ================= SECTIONS ================= */
 
 .section {
-  padding: 70px 20px;
+  padding: 80px 20px;
   max-width: 1200px;
   margin: auto;
   text-align: center;
@@ -121,18 +138,23 @@ body {
 /* ================= SERVICES ================= */
 
 #services {
-  padding: 60px 0;
+  padding-bottom: 60px;
 }
 
 #services h2 {
-  margin-bottom: 40px;
+  padding: 60px 20px 40px;
   text-align: center;
 }
 
 .service-row {
   display: flex;
-  align-items: stretch;
-  margin-bottom: 30px;
+  min-height: 500px; /* keeps them tall */
+  width: 100%;
+  margin: 20px 0;
+}
+
+.service-row.reverse {
+  flex-direction: row-reverse;
 }
 
 .service-image,
@@ -144,7 +166,6 @@ body {
   background-size: cover;
   background-position: center;
   position: relative;
-  overflow: hidden;
 }
 
 .service-overlay {
@@ -157,34 +178,18 @@ body {
 }
 
 .service-overlay h3 {
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 
 .service-text {
-  padding: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1rem;
+  padding: 60px;
+  font-size: 1.1rem;
 }
 
-/* Inner corner rounding */
-
-.service-row:not(.reverse) .service-image {
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
-
-.service-row.reverse {
-  flex-direction: row-reverse;
-}
-
-.service-row.reverse .service-image {
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-}
-
-/* ================= CONTACT ================= */
+/* ================= CONTACT PAGE ================= */
 
 .page-hero {
   position: relative;
@@ -204,11 +209,11 @@ body {
 .page-hero h1 {
   position: relative;
   z-index: 2;
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 .contact-section {
-  padding: 60px 20px;
+  padding: 80px 20px;
 }
 
 .contact-grid {
@@ -216,11 +221,11 @@ body {
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 2px 1fr;
-  gap: 30px;
+  gap: 40px;
 }
 
 .contact-divider {
-  background: rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.25);
   width: 2px;
 }
 
@@ -228,13 +233,14 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
+  font-size: 1.1rem;
 }
 
 .contact-map {
-  aspect-ratio: 1 / 1;
-  border-radius: 15px;
+  border-radius: 14px;
   overflow: hidden;
+  min-height: 350px;
 }
 
 .contact-map iframe {
@@ -246,8 +252,8 @@ body {
 /* ================= FOOTER ================= */
 
 footer {
-  background: #111;
   padding: 20px;
+  background: #111;
 }
 
 .footer-inner {
@@ -256,34 +262,50 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15px;
+  gap: 20px;
 }
 
 .footer-inner img {
-  height: 70px;
+  height: 100px;
 }
 
 /* ================= MOBILE ================= */
 
 @media (max-width: 768px) {
 
-  .nav {
-    flex-direction: column;
-    gap: 10px;
+  .nav-inner {
+    height: 100px;
+  }
+
+  .nav-phone {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: block;
   }
 
   .nav-links {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    background: #111;
     flex-direction: column;
     align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    display: none;
   }
 
-  .hero-content h1 {
-    font-size: 1.8rem;
+  .nav-links.active {
+    display: flex;
   }
 
   .service-row,
   .service-row.reverse {
     flex-direction: column;
+    min-height: auto;
   }
 
   .service-image,
@@ -291,8 +313,12 @@ footer {
     width: 100%;
   }
 
+  .service-image {
+    height: 300px;
+  }
+
   .service-text {
-    padding: 25px;
+    padding: 30px;
   }
 
   .contact-grid {
@@ -306,4 +332,5 @@ footer {
   .footer-inner {
     flex-direction: column;
   }
+
 }

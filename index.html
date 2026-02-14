@@ -6,6 +6,15 @@
   <title>HD Automotives | Vehicle Repairs & Servicing</title>
   <link rel="stylesheet" href="./css/style.css" />
 </head>
+<script>
+  const toggle = document.getElementById("navToggle");
+  const links = document.getElementById("navLinks");
+
+  toggle.addEventListener("click", () => {
+    links.classList.toggle("active");
+  });
+</script>
+
 <body>
 <nav class="nav">
   <div class="nav-inner">
