@@ -6,14 +6,6 @@
   <title>Contact | HD Automotives</title>
   <link rel="stylesheet" href="./css/style.css" />
 </head>
-<script>
-  const toggle = document.getElementById("navToggle");
-  const links = document.getElementById("navLinks");
-
-  toggle.addEventListener("click", () => {
-    links.classList.toggle("active");
-  });
-</script>
 
 <body>
 
@@ -39,7 +31,6 @@
   </div>
 </nav>
 
-
 <header class="page-hero">
   <div class="page-hero-overlay"></div>
   <h1>Get in Touch</h1>
@@ -56,13 +47,13 @@
       <p><strong>Opening Hours:</strong><br>
           Mon-Fri: 8:30am - late<br>
           Sat: 8:30am - late<br>
-          Sun: 8:30- late</p>
+          Sun: 8:30am - late</p>
     </div>
 
     <div class="contact-divider"></div>
 
     <div class="contact-map">
-      <iframe src="https://www.google.com/maps?q=London&output=embed"></iframe>
+      <iframe src="https://www.google.com/maps?q=Cambridge&output=embed"></iframe>
     </div>
 
   </div>
@@ -75,6 +66,18 @@
   </div>
 </footer>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.getElementById("navToggle");
+  const links = document.getElementById("navLinks");
+
+  if (toggle && links) {
+    toggle.addEventListener("click", function () {
+      links.classList.toggle("active");
+    });
+  }
+});
+</script>
+
 </body>
 </html>
-    

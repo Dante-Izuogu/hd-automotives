@@ -6,16 +6,9 @@
   <title>HD Automotives | Vehicle Repairs & Servicing</title>
   <link rel="stylesheet" href="./css/style.css" />
 </head>
-<script>
-  const toggle = document.getElementById("navToggle");
-  const links = document.getElementById("navLinks");
-
-  toggle.addEventListener("click", () => {
-    links.classList.toggle("active");
-  });
-</script>
 
 <body>
+
 <nav class="nav">
   <div class="nav-inner">
     
@@ -25,20 +18,16 @@
 
     <div class="nav-phone">07892 836067</div>
 
-    <button class="nav-toggle" id="navToggle">
-      ☰
-    </button>
+    <button class="nav-toggle" id="navToggle">☰</button>
 
     <ul class="nav-links" id="navLinks">
-      <li><a href="index.html#about">About</a></li>
-      <li><a href="index.html#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
 
   </div>
 </nav>
-
-
 
 <header class="hero">
   <video autoplay muted loop playsinline class="hero-video">
@@ -55,8 +44,9 @@
 <section id="about" class="section dark">
   <h2>About HD Automotives</h2>
   <p>
-    HD Automotives is a local, independent garage providing professional
-    vehicle servicing, diagnostics, and repairs you can trust.
+    HD Automotives is a trusted independent garage delivering high-quality vehicle repairs,
+    diagnostics and servicing. We combine experience, attention to detail and honest pricing
+    to ensure every customer leaves confident in the safety and performance of their vehicle.
   </p>
 </section>
 
@@ -68,7 +58,11 @@
       <div class="service-overlay"><h3>General Servicing</h3></div>
     </div>
     <div class="service-text">
-      <p>Full and interim services to keep your vehicle running smoothly.</p>
+      <p>
+        Our full and interim servicing packages include thorough inspections,
+        fluid replacements, filter changes and performance checks to keep your
+        vehicle running efficiently and reliably throughout the year.
+      </p>
     </div>
   </div>
 
@@ -77,7 +71,11 @@
       <div class="service-overlay"><h3>Diagnostics</h3></div>
     </div>
     <div class="service-text">
-      <p>Advanced diagnostics to quickly identify faults.</p>
+      <p>
+        Using advanced diagnostic tools, we quickly identify engine faults,
+        electrical issues and warning light problems — saving you time and
+        preventing minor issues from becoming costly repairs.
+      </p>
     </div>
   </div>
 
@@ -86,7 +84,11 @@
       <div class="service-overlay"><h3>MOT Preparation</h3></div>
     </div>
     <div class="service-text">
-      <p>Pre-MOT inspections and repairs.</p>
+      <p>
+        Our pre-MOT inspections ensure your vehicle meets safety standards.
+        We check brakes, suspension, emissions and lighting so you can pass
+        your MOT with confidence.
+      </p>
     </div>
   </div>
 
@@ -95,9 +97,26 @@
       <div class="service-overlay"><h3>Brakes & Suspension</h3></div>
     </div>
     <div class="service-text">
-      <p>Safety-critical brake and suspension work.</p>
+      <p>
+        We carry out essential brake pad, disc and suspension repairs to
+        maintain safe handling and stopping performance. Safety is always our priority.
+      </p>
     </div>
   </div>
+
+  <div class="service-row">
+    <div class="service-image" style="background-image:url('./assets/tyres.jpg')">
+      <div class="service-overlay"><h3>Tyre Services</h3></div>
+    </div>
+    <div class="service-text">
+      <p>
+        From puncture repairs to full tyre replacements, we provide fast,
+        reliable tyre services including balancing and pressure checks to
+        ensure maximum grip, stability and fuel efficiency.
+      </p>
+    </div>
+  </div>
+
 </section>
 
 <footer>
@@ -106,6 +125,17 @@
     <p>© 2026 HD Automotives. All rights reserved.</p>
   </div>
 </footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.getElementById("navToggle");
+  const links = document.getElementById("navLinks");
+
+  toggle.addEventListener("click", function () {
+    links.classList.toggle("active");
+  });
+});
+</script>
 
 </body>
 </html>
